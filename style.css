@@ -1,0 +1,671 @@
+/*
+Theme Name: OnlineShop
+Theme URI: https://karsazsho.com
+Author: Vahid Tahmasebi
+Author URI: https://karsazsho.com
+Description:  این قالب به صورت ازمایشی در دوره صفر تا صد برنامه نویسی قالب ووکامرس وردپرس پیاده سازی شده است
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:
+*/
+
+body {
+    direction: rtl;
+    font-family: IRANSans;
+}
+
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: bold;
+    src: url('fonts/eot/IRANSansWeb_Bold.eot');
+    src: url('fonts/eot/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('fonts/woff2/IRANSansWeb_Bold.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('fonts/woff/IRANSansWeb_Bold.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('fonts/ttf/IRANSansWeb_Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/eot/IRANSansWeb_Medium.eot');
+    src: url('fonts/eot/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('fonts/woff2/IRANSansWeb_Medium.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('fonts/woff/IRANSansWeb_Medium.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('fonts/ttf/IRANSansWeb_Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 300;
+    src: url('fonts/eot/IRANSansWeb_Light.eot');
+    src: url('fonts/eot/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('fonts/woff2/IRANSansWeb_Light.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('fonts/woff/IRANSansWeb_Light.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('fonts/ttf/IRANSansWeb_Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 200;
+    src: url('fonts/eot/IRANSansWeb_UltraLight.eot');
+    src: url('fonts/eot/IRANSansWeb_UltraLight.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('fonts/woff2/IRANSansWeb_UltraLight.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('fonts/woff/IRANSansWeb_UltraLight.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('fonts/ttf/IRANSansWeb_UltraLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/eot/IRANSansWeb.eot');
+    src: url('fonts/eot/IRANSansWeb.eot?#iefix') format('embedded-opentype'), /* IE6-8 */ url('fonts/woff2/IRANSansWeb.woff2') format('woff2'), /* FF39+,Chrome36+, Opera24+*/ url('fonts/woff/IRANSansWeb.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('fonts/ttf/IRANSansWeb.ttf') format('truetype');
+}
+
+
+
+.logosite {
+    width: 240px;
+    height: 80px;
+    margin: 10px 5px;
+}
+
+.logosite img {
+    width: 200px;
+}
+
+.navbar-default {
+    background-color: lightseagreen;
+    margin: 0px 2px;
+    border-color: none;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: #fff;
+    background-color: #03A9F4;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+    color: #03A9F4;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+    background: teal;
+    color: #fff;
+}
+
+.menus ul li ul {
+    display: none;
+    position: absolute;
+    list-style: none;
+    width: 150px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    padding-right: 0px;
+    z-index: 99;
+    background: #fff;
+}
+
+.menus ul li:hover ul {
+    display: block;
+    width: 150px;
+    position: absolute;
+    box-shadow: 0px 1px 5px teal;
+}
+
+.menus ul li ul li {
+    list-style: none;
+    padding: 10px 5px;
+
+}
+
+.menus ul li ul li a {
+    text-decoration: none;
+    padding: 10px 5px;
+}
+
+.menus ul li ul li:hover a {
+    display: block;
+    border-radius: 3px;
+    background-color: teal;
+    color: #fff;
+
+}
+
+.menus {
+    padding: 0;
+}
+
+.search {
+    background-color: teal;
+    padding: 8px 15px;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.search input::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.search button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 22px;
+    outline: none;
+}
+
+.search input {
+    background: none;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+.glyphicon {
+    position: relative;
+    top: 5px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.navbar .container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.box-img-home, .singlecontent, .widgetbox, .archive {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px 1px #ddd;
+    margin: 10px 0;
+}
+
+.slider-home {
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.carousel-caption {
+    left: auto;
+    right: 10%;
+    padding-bottom: 30px;
+    top: 120px;
+}
+
+.carousel-caption h3 {
+    font-weight: normal;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    border-radius: 3px;
+}
+
+.carousel-caption p {
+    font-weight: normal;
+    font-size: 13px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 15px;
+    border-radius: 3px;
+    height: 60px;
+    overflow: hidden;
+}
+
+.titlemain {
+    box-shadow: 0 2px 0 #eee;
+    float: right;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.titlemain h3 {
+    padding: 15px 5px;
+    box-shadow: 0 2px 0 #2196f5;
+    float: right;
+    margin: 0;
+    font-weight: 900;
+    font-size: 17px;
+}
+
+.productbox {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    margin: 0 0 20px 0;
+}
+
+.productbox img {
+    display: block;
+    margin: 15px auto;
+    height: 230px;
+}
+
+.productbox h2 {
+    font-size: 17px;
+    width: 90%;
+    margin: auto;
+    height: 35px;
+    line-height: 30px;
+    overflow: hidden;
+    color: #283535d;
+}
+
+.productbox span {
+    color: rgba(0, 0, 0, 0.5);
+    padding: 12px;
+}
+
+.productbox a.add_to_cart {
+    width: 100%;
+    color: #8bc34a;
+    font-size: 15px;
+    padding: 5px;
+    display: block;
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+
+.productbox:hover a.add_to_cart {
+    background-color: #8bc34a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0 0 5px 5px;
+}
+
+.otherproduct a {
+    color: #2196f5;
+    border: 2px solid #2196f5;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 0;
+    display: block;
+    margin: 15px;
+}
+
+.otherproduct a:hover {
+    background: #2196f5;
+    color: #ffffff;
+    border: 2px solid #2196f5;
+    text-decoration: none;
+}
+
+.footersite {
+    background: #455a64;
+    width: 100%;
+    padding: 10px 0 0 0;
+}
+
+.widfooter {
+    padding: 0 15px;
+}
+
+.widfooter .contfooter table {
+    background-color: transparent;
+    width: 100% !important;
+    color: #fff !important;
+}
+
+.widheaderfoot h3 {
+    font-size: 15px;
+    color: #ffffff;
+    box-shadow: 0px 2px 0 #ffffff;
+    padding: 10px 0;
+}
+
+.contfooter ul {
+    list-style: none;
+    padding: 0px;
+}
+
+.contfooter ul li a {
+    padding: 10px 5px;
+    display: block;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.contfooter ul li:hover a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #2aabd2;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.copyrightfooter {
+    background-color: #28353d;
+    width: 100%;
+    padding: 10px;
+    color: #ffffff;
+}
+
+.socialfooter {
+    text-align: left;
+}
+
+.socialfooter a {
+    padding: 4px 8px;
+    border-radius: 2px;
+}
+
+.socialfooter a:hover {
+    background-color: #55acee;
+}
+
+.navbar-toggle {
+    margin-left: 25px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: transparent !important;
+}
+
+.singlecontent {
+    padding: 10px
+}
+
+.titleproduct h1 {
+    font-size: 24px
+}
+
+.titleproduct span {
+    font-size: 16px
+}
+
+.singlecontent form {
+    margin: 15px 0 0 0
+}
+
+.singlecontent form input[type=text] {
+    background: #e7e7e7;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    width: 60px
+}
+
+.singlecontent form input[type=submit], .singlecontent form button {
+    color: #fff;
+    background: #8bc34a;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.imageproduct img {
+    border: 1px solid #bfbfbf;
+    margin: 10px
+}
+
+.nav-tabs {
+    border-bottom: none;
+    margin: 0 6px 0 0;
+}
+
+.tab-pane {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    padding: 15px;
+    line-height: 30px;
+
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    color: #2196f3;
+    box-shadow: 0 -2px 0 #2196f3;
+    border: 1px solid #ddd;
+}
+
+.nav-tabs > li > a {
+    background: #e2e2e2;
+    border: 1px solid #ddd;
+    padding: 14px;
+    margin: 0 5px 0 0;
+    color: #000
+}
+
+.tab-content {
+    text-align: justify !important;
+}
+
+.headerbox {
+    background: lightseagreen;
+    padding: 6px 11px;
+}
+
+.headerbox h4 {
+    color: #fff;
+    margin-right: 5px;
+}
+
+.newssite {
+    display: block;
+    margin: 10px 0;
+    height: 75px;
+}
+
+.newssite img {
+    float: right;
+    margin: 0 0 0 5px;
+    border-radius: 5px;
+}
+
+.newssite h3 {
+    font-size: 16px;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.newssite h3:hover {
+    text-decoration: none;
+}
+
+.archive {
+    margin: 10px auto;
+    padding: 12px;
+}
+
+.archivebox{
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px 1px #ddd;
+    margin: 10px auto;
+    height: 150px;
+    padding: 10px 15px;
+}
+
+.archivebox img {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
+.archivebox h3 {
+    font-size: 16px;
+}
+
+.archivebox p {
+    text-align: justify;
+    overflow: hidden;
+}
+
+.sps {
+    width: 100%;
+    height: 2px;
+    background: #ccc;
+    margin: 10px auto;
+}
+
+.woocommerce #reviews #comments h2 {
+    font-size: 16px !important;
+    margin-bottom: 40px !important;
+}
+
+.woocommerce #reviews #comments ol.commentlist li img.avatar {
+    top: 15px;
+    right: -20px;
+    width: 60px;
+    height: 60px;
+    background: #ebe9eb;
+    border: none;
+    border-radius: 50%;
+}
+
+.woocommerce #reviews #comments ol.commentlist li .comment-text {
+    margin: 0 50px 0 0;
+    border: none;
+    border-radius: 6px;
+    padding: 15px 15px;
+    background: #f6f6f6;
+    outline: none;
+}
+
+.woocommerce .star-rating span::before {
+    color: orange;
+}
+
+.woocommerce #review_form #respond textarea {
+    background: #f6f6f6;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    height: 160px;
+    padding: 10px 15px;
+}
+
+.singlecontent form input[type=text] , form input[type=email] {
+    background: #f6f6f6;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    padding: 4px 10px;
+    width: 50%;
+    display: block;
+}
+
+.woocommerce #review_form #respond .form-submit input {
+    right: auto;
+    width: 50%;
+    background: cornflowerblue;
+    color: #fff;
+    padding: 15px 5px;
+}
+
+.woocommerce .quantity .qty {
+    width: 15%;
+    text-align: center;
+    background: #f6f6f6;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    padding: 10px 5px;
+    float: right;
+    margin-left: 10px;
+}
+
+.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
+    background-color: #8bc34a;
+    color: #fff;
+    padding: 13px 20px;
+}
+
+.contexcerpt{
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 30px;
+    line-height: 30px;
+    text-align: justify;
+}
+
+.woocommerce .woocommerce-error .button, .woocommerce .woocommerce-info .button, .woocommerce .woocommerce-message .button, .woocommerce-page .woocommerce-error .button, .woocommerce-page .woocommerce-info .button, .woocommerce-page .woocommerce-message .button {
+    float: left;
+    background-color: #8bc34a;
+    color: #fff;
+}
+
+.woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover {
+    background-color: #a46497;
+    text-decoration: none;
+    background-image: none;
+    color: #fff;
+}
+
+#add_payment_method table.cart td.actions .coupon .input-text, .woocommerce-cart table.cart td.actions .coupon .input-text, .woocommerce-checkout table.cart td.actions .coupon .input-text {
+    width: 60%;
+}
+
+.widgetbox > img {
+	width: 258px !important;
+	height: auto;
+}
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+    margin: 0 0 2.992em 3.8% !important;
+    padding: 8px;
+    width: 21.05%;
+    margin-right: 0;
+    border-radius: 5px !important;
+    border: 1px solid #eee !important;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+}
+
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+    width: 100% !important;
+    text-align: center !important;
+    background-color: #8bc34a !important;
+    color: #28353d !important;
+}
+
+.woocommerce .woocommerce-ordering select {
+    border-radius: 5px !important;
+    padding: 1px 10px !important;
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce ul.products li.product h3 {
+    line-height: 26px !important;
+    height: 65px !important;
+    overflow: hidden !important;
+}
+
+.woocommerce-message a{
+	width: 12% !important;
+}
+
+@media (max-width: 768px) {
+
+    .menurespon {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .menus ul li ul {
+        position: relative;
+        width: 100%;
+    }
+
+    .menus ul li:hover ul {
+        width: 100%;
+    }
+
+    .menus ul li ul li a {
+        padding: 10px 20px;
+    }
+
+    .logosite {
+        margin: 10px 60px;
+    }
+
